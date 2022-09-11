@@ -20,7 +20,7 @@ with open("data.txt", 'r', encoding='utf-8') as text:
     last_words = np.random.choice(list(dict_data.keys()), size=1)[0].split()
     print(last_words)
     for i in range(n):
-        last_two = last_words[len(last_words)-2] + " " + last_words[len(last_words)-1]
+        last_two = last_words[len(last_words) - 2] + " " + last_words[len(last_words) - 1]
         if dict_data.get(last_two):
             last_words.append(
                 np.random.choice(list(dict_data[last_two].keys()), size=1, p=list(dict_data[last_two].values()))[0])
